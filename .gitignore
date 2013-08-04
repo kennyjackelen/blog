@@ -1,0 +1,11 @@
+# Exclude these files from the git repo
+wp-content/backup/*
+wp-content/cache/*
+wp-content/upgrade/*
+wp-content/uploads/*
+sitemap.*
+wp-config.php
+ 
+# Include these files in previously blocked directories
+!wp-content/uploads/.htaccess
+!wp-content/uploads/optimize.sh
