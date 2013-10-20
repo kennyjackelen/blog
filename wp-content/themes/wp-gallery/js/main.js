@@ -6,7 +6,6 @@ function onPageLoad()
 		type: 'image',
 		gallery: { enabled: true }
 	});
-//	$('.gallery').swipeshow();
 }
 
 $(onPageLoad);

@@ -25,9 +25,7 @@
             {
               $cat = get_category($c);
           ?>
-          <!--<a href="<?php echo get_category_link($cat->term_id); ?>">-->
-            <a class="label label-inverse" href="<?php echo get_category_link($cat->term_id); ?>"><?php echo $cat->name; ?></a>
-          <!--</a>-->
+          <a class="label label-inverse" href="<?php echo get_category_link($cat->term_id); ?>"><?php echo $cat->name; ?></a>
           <?php
             }
           ?>
