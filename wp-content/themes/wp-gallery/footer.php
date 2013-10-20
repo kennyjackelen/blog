@@ -20,7 +20,8 @@
   <!-- <script src="<?php bloginfo('template_url'); ?>/js/libs/modernizr.js"></script> -->
   <!-- <script src="<?php bloginfo('template_url'); ?>/js/swipeshow.js"></script> -->
   <!-- <script src="<?php bloginfo('template_url'); ?>/js/slideshow.js"></script> -->
-  <script src="<?php bloginfo('template_url'); ?>/js/main.js"></script>
+  <script src="<?php bloginfo('template_url'); ?>/js/libs/min/jquery.magnific-popup.min.js"></script>
+  <script src="<?php bloginfo('template_url'); ?>/js/main.min.js"></script>
   <!-- end scripts -->
 
   <script>
