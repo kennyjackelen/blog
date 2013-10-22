@@ -23,6 +23,9 @@ function initGalleryPopup(){
 }
 
 function setupSwipe(){
+	var _preventDefault = function(event){event.preventDefault();};
+
+	$('[class^="mfp"]').bind('dragstart',_preventDefault).bind('selectstart',_preventDefault);
 	$('.mfp-img').mousedown( function(event) {
 		event.preventDefault();
 	});
