@@ -20,6 +20,9 @@
 
     ?>
   </title>
+  <?php if ( is_home() || is_front_page() ) { ?>
+  <meta name="mobile-web-app-capable" content="yes">
+  <?php } ?>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
