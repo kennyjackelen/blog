@@ -1,6 +1,14 @@
 function onPageLoad()
 {
 	$('.dropdown-toggle').dropdown();
+	initGalleryPopup();
+}
+
+function initGalleryPopup(){
+	if($.fn.magnificPopup === undefined){
+		return;
+	}
+
 	$('.gallery').magnificPopup( {
 		delegate: 'a',
 		type: 'image',
