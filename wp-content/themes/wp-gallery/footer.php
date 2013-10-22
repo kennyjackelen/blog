@@ -17,8 +17,10 @@
 
   <!-- start scripts -->
   <script src="<?php bloginfo('template_url'); ?>/js/libs/min/bootstrap.min.js"></script>
+  <?php if (is_single() ) { ?>
   <script src="<?php bloginfo('template_url'); ?>/js/libs/min/jquery.magnific-popup.min.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/js/libs/min/jquery.touchSwipe.min.js"></script>
+  <?php } ?>
   <script src="<?php bloginfo('template_url'); ?>/js/main.min.js"></script>
   <!-- end scripts -->
 

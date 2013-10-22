@@ -25,7 +25,9 @@
 
   <!-- start styles -->
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/libs/min/bootstrap-all.min.css" />
+  <?php if (is_single() ) { ?>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/libs/min/magnific-popup.min.css" />
+  <?php } ?>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/main.min.css" />
   <!-- end styles -->
   
