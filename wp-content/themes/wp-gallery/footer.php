@@ -11,6 +11,12 @@
 
   </div><!-- #wrapper -->
 
+  <?php
+    // Set this flag to true to have the server grab non-minified JS
+    $debug_mode = false;
+  ?>
+
+<?php if ( $debug_mode ) { ?>
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="<?php bloginfo('template_url'); ?>/js/libs/jquery-1.10.2.min.js"><\/script>')</script>
@@ -21,8 +27,30 @@
   <script src="<?php bloginfo('template_url'); ?>/js/libs/min/jquery.magnific-popup.min.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/js/libs/min/jquery.touchSwipe.min.js"></script>
   <?php } ?>
-  <script src="<?php bloginfo('template_url'); ?>/js/main.min.js"></script>
+  <script src="<?php bloginfo('template_url'); ?>/js/main.js"></script>
   <!-- end scripts -->
+<?php } else {  // not in debug mode ?>
+  <script type="text/javascript">
+    // Add a script element as a child of the body
+    function downloadJSAtOnload() {
+      var element = document.createElement("script");
+      <?php if (is_single() ) { ?>
+      element.src = "<?php bloginfo('template_url'); ?>/js/publish/onepost.js";
+      <?php } else { ?>
+      element.src = "<?php bloginfo('template_url'); ?>/js/publish/multipost.js";
+      <?php } ?>
+      document.body.appendChild(element);
+    }
+
+    // Check for browser support of event handling capability
+    if (window.addEventListener)
+      window.addEventListener("load", downloadJSAtOnload, false);
+    else if (window.attachEvent)
+      window.attachEvent("onload", downloadJSAtOnload);
+    else window.onload = downloadJSAtOnload;
+
+  </script>
+<?php } ?>
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
