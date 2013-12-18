@@ -27,11 +27,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <!-- start styles -->
-  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/libs/min/bootstrap-all.min.css" />
   <?php if (is_single() ) { ?>
-  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/libs/min/magnific-popup.min.css" />
+  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/publish/onepost.css" />
+  <?php } else { ?>
+  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/publish/multipost.css" />
   <?php } ?>
-  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/main.min.css" />
   <!-- end styles -->
   
   <?php wp_head(); ?>
