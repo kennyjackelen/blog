@@ -30,14 +30,15 @@
   <script src="<?php bloginfo('template_url'); ?>/js/main.js"></script>
   <!-- end scripts -->
 <?php } else {  // not in debug mode ?>
+<?php $js_version = 1;  // for cachebusting  ?>
   <script type="text/javascript">
     // Add a script element as a child of the body
     function downloadJSAtOnload() {
       var element = document.createElement("script");
       <?php if (is_single() ) { ?>
-      element.src = "<?php bloginfo('template_url'); ?>/js/publish/onepost.js";
+      element.src = "<?php bloginfo('template_url'); ?>/js/publish/onepost.<?php echo $js_version ?>.js";
       <?php } else { ?>
-      element.src = "<?php bloginfo('template_url'); ?>/js/publish/multipost.js";
+      element.src = "<?php bloginfo('template_url'); ?>/js/publish/multipost.<?php echo $js_version ?>.js";
       <?php } ?>
       document.body.appendChild(element);
     }

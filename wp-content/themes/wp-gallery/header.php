@@ -10,7 +10,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>
     <?php
-
       if ( is_single() ) { single_post_title(); }
       elseif ( is_home() || is_front_page() ) { bloginfo('name'); print ' | '; bloginfo('description'); get_page_number(); }
       elseif ( is_page() ) { single_post_title(''); }
@@ -27,10 +26,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <!-- start styles -->
+  <?php $css_version = 1;  // for cachebusting  ?>
   <?php if (is_single() ) { ?>
-  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/publish/onepost.css" />
+  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/publish/onepost.<?php echo $css_version ?>.css" />
   <?php } else { ?>
-  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/publish/multipost.css" />
+  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/publish/multipost.<?php echo $css_version ?>.css" />
   <?php } ?>
   <!-- end styles -->
   
