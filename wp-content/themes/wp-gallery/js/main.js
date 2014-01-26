@@ -30,10 +30,20 @@ function initGalleryPopup(){
       enabled: true,
       navigateByImgClick: false,
     },
+    image: {
+      titleSrc: getTitleForGalleryItem
+    },
     callbacks: {
       imageLoadComplete: setupSwipe
     }
   });
+}
+
+function getTitleForGalleryItem(item){
+  // WordPress stopped adding the title to the actual link (see
+  // wp_get_attachment_link in wp-includes/post-template.php), so we need
+  // to inspect the image tag's alt attribute to get our caption now.
+  return item.el.children('img').first().attr('alt');
 }
 
 function setupSwipe(){
