@@ -17,9 +17,9 @@
   ?>
 
 <?php if ( $debug_mode ) { ?>
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="<?php bloginfo('template_url'); ?>/js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+  <!-- Grab Microsoft CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
+  <script>window.jQuery || document.write('<script src="<?php bloginfo('template_url'); ?>/js/libs/jquery-1.11.0.min.js"><\/script>')</script>
 
   <!-- start scripts -->
   <script src="<?php bloginfo('template_url'); ?>/js/libs/min/bootstrap.min.js"></script>
@@ -30,7 +30,7 @@
   <script src="<?php bloginfo('template_url'); ?>/js/main.js"></script>
   <!-- end scripts -->
 <?php } else {  // not in debug mode ?>
-<?php $js_version = 1;  // for cachebusting  ?>
+<?php $js_version = 2;  // for cachebusting  ?>
   <script type="text/javascript">
     // Add a script element as a child of the body
     function downloadJSAtOnload() {
