@@ -1,7 +1,21 @@
 function onPageLoad()
 {
   $('.dropdown-toggle').dropdown();
+  attachLoadingAlertOnUnload();
   initGalleryPopup();
+  hideLoadingMessage();
+}
+
+function hideLoadingMessage(){
+  $('#loading_message').slideUp(500);
+}
+
+function attachLoadingAlertOnUnload(){
+  window.onbeforeunload = showLoadingAlertOnUnload;
+}
+
+function showLoadingAlertOnUnload(){
+  $('#loading_message').slideDown(500);
 }
 
 function initGalleryPopup(){

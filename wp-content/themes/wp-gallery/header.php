@@ -43,6 +43,21 @@
 </head>
 <body>
 
+<ul id="loading_message" style="display:none; top: 0px; left: 5%; position: fixed; width: 90%; height: auto; margin: 0px; padding: 0px; list-style-type: none; z-index: 9999999;">
+  <li id="loading_message_inner" style="overflow: hidden; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAoCAYAAAAPOoFWAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAPZJREFUeNq81tsOgjAMANB2ov7/7ypaN7IlIwi9rGuT8QSc9EIDAsAznxvY4pXPKr05RUE5MEVB+TyWfCEl9LZApYopCmo9C4FKSMtYoI8Bwv79aQJU4l6hXXCZrQbokJEksxHo9KMOgc6w1atHXM8K9DVC7FQnJ0i8iK3QooGgbnyKgMDygBWyYFZoqx4qS27KqLZJjA1D0jK6QJcYEQEiWv9PGkTsbqxQ8oT+ZtZB6AkdsJnQDnMoHXHLGKOgDYuCWmYhEERCI5gaamW0bnHdA3k2ltlIN+2qKRyCND0bhqSYCyTB3CAOc4WusBEIpkeBuPgJMAAX8Hs1NfqHRgAAAABJRU5ErkJggg==); background-attachment: scroll; background-color: rgb(100, 100, 100); border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-width: 2px; border-bottom-style: solid; border-color: rgb(100,100,100); border-left-width: 2px; border-left-style: solid; border-right-width: 2px; border-right-style: solid; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 4px; color: rgb(10, 10, 10); background-position: 0% 0%; background-repeat: repeat no-repeat;">
+    <div>
+      <div style="font-size: 13px; line-height: 16px; text-align: center; padding: 8px 10px 9px; width: auto; position: relative;">
+        <span>Loading...</span>
+      </div>
+    </div>
+  </li>
+</ul>
+<script type="text/javascript">
+  // The loading message is hidden by default so you don't have a persistent "loading..." message if JS is disabled.
+  // We'll use JS to show it now.
+  document.getElementById('loading_message').style.display = 'block';
+</script>
+
 <div id="navigation" class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
